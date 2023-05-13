@@ -4,13 +4,103 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
     <title>Calculadora</title>
   </head>
-  <body>
-    <h1>Calculadora</h1>
+  <body class="bg-info">
+    <!-- <h1>Calculadora</h1>
     <div id="display">Sua equação</div>
-    <div id="result">Resultado</div>
+    <div id="result">Resultado</div> -->
+    <div
+      class="container text-center"
+      id="calculadora"
+      style="width: 100%; height: 100%"
+    >
+      <div class="row mb-0">
+        <div
+          class="col m-1 me-0 p-2 text-end bg-white text-dark overflow-hidden"
+          id="tela"
+        >
+          0
+        </div>
+      </div>
+      <div class="row mb-0">
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          7
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          8
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          9
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          /
+        </div>
+      </div>
+      <div class="row mb-0">
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          4
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          5
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          6
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          *
+        </div>
+      </div>
+      <div class="row mb-0">
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          1
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          2
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          3
+        </div>
+        <div class="col m-1 me-0 p-2 text-center bg-primary text-light buttons">
+          +
+        </div>
+      </div>
+      <div class="row mb-0">
+        <div
+          class="col m-1 me-0 p-2 d-inline text-center bg-primary text-light buttons"
+        >
+          0
+        </div>
+        <div
+          class="col m-1 me-0 p-2 d-inline text-center bg-primary text-light buttons"
+        >
+          CE
+        </div>
+        <div
+          class="col m-1 me-0 p-2 d-inline text-center bg-primary text-light buttons"
+        >
+          =
+        </div>
+        <div
+          class="col m-1 me-0 p-2 d-inline text-center bg-primary text-light buttons"
+        >
+          -
+        </div>
+      </div>
+    </div>
+
     <script src="./index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

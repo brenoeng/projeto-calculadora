@@ -1,5 +1,4 @@
-const display = document.querySelector("#display");
-const result = document.querySelector("#result");
+const tela = document.querySelector("#tela");
 
 let expressao = "";
 let numESimb = [
@@ -19,16 +18,57 @@ let numESimb = [
   "+",
 ];
 
-window.addEventListener("keypress", (ev) => {
+window.addEventListener("keydown", (ev) => {
   numESimb.forEach((element) => {
     if (element === ev.key) {
       expressao += ev.key;
-      display.innerHTML = expressao;
+      tela.innerHTML = expressao;
     }
   });
   if (ev.key === "Enter" && expressao !== "") {
     let resultado = eval(expressao);
     expressao = "";
-    result.innerHTML = resultado;
+    if (String(resultado).includes(".")) {
+      tela.innerHTML = resultado.toFixed(13);
+    } else {
+      tela.innerHTML = resultado;
+    }
+  }
+  if (ev.key === "Delete" || ev.key === "Backspace") {
+    tela.innerHTML = "0";
+    expressao = "";
+  }
+});
+
+const btn = document.querySelectorAll(".buttons");
+btn.forEach((el) => {
+  numESimb.forEach((ele) => {
+    if (el.innerText === ele) {
+      el.addEventListener("click", () => {
+        expressao += ele;
+        tela.innerHTML = expressao;
+      });
+
+      // expressao += ev.key;
+    }
+  });
+
+  if (el.innerText === "=") {
+    el.addEventListener("click", () => {
+      let resultado = eval(expressao);
+      expressao = "";
+      if (String(resultado).includes(".")) {
+        tela.innerHTML = resultado.toFixed(13);
+      } else {
+        tela.innerHTML = resultado;
+      }
+    });
+  }
+
+  if (el.innerText === "CE") {
+    el.addEventListener("click", () => {
+      tela.innerHTML = "0";
+      expressao = "";
+    });
   }
 });

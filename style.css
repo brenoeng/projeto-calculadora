@@ -7,3 +7,13 @@ div {
   font-size: 2rem;
   margin: 25px;
 }
+
+#calculadora {
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.buttons:hover {
+  background-color: #3d8bff !important;
+  cursor: pointer;
+}
